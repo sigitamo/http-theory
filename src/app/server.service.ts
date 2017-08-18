@@ -13,4 +13,8 @@ export class ServerService  {
             {headers: headers});
     }
 
+    getServers() {
+       return  this.http.get('https://theory-ng-http.firebaseio.com/data.json')
+    }
+
 }
