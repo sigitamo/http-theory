@@ -8,7 +8,10 @@ export class ServerService  {
 
     storeServers(servers: any[]) {
         const headers = new Headers({'Content-Type': 'application/json'});
-        return this.http.post('https://theory-ng-http.firebaseio.com/data.json', 
+        // return this.http.post('https://theory-ng-http.firebaseio.com/data.json', 
+        //     servers, 
+        //     {headers: headers});
+        return this.http.put('https://theory-ng-http.firebaseio.com/data.json', 
             servers, 
             {headers: headers});
     }
