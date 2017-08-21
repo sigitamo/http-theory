@@ -36,4 +36,12 @@ export class ServerService  {
         );
     }
 
+    getAppName() {
+        return this.http.get('https://theory-ng-http.firebaseio.com/appName.json')
+            .map(
+                (response: Response) => {
+                    return response.json()
+                }
+            )
+    }
 }
